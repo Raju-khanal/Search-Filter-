@@ -15,8 +15,9 @@ function Table() {
             minHeight: "100vh",
             gap: "15px",
             paddingTop: "20px",
+
         }}>
-            <input type="text" onChange={(e) => setQuery(e.target.value)} className="border-black" />
+            <input type="text" onChange={(e) => setQuery(e.target.value)} className="border-black border-2" />
             <Data setUser={handleSet} />
 
             <table border="2">
@@ -27,7 +28,7 @@ function Table() {
                         <th style={{ padding: "8px" }}>Username</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className="bg-red-500">
                     {filteredUsers.map((user, index) => (
                         <tr style={{ border: "1px solid black", borderCollapse: "collapse" }} key={index}>
                             <td>{user.name}</td>
